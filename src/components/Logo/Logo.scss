@@ -1,0 +1,14 @@
+@import "../shared";
+
+.logo {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+
+  span {
+    font-family: $logo-font;
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: $text-color;
+  }
+}

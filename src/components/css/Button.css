@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.button {
+  width: 100%;
+  padding: 1.2rem;
+  margin: 0.8rem auto 2.4rem auto;
+  border: solid 0.1rem #8a3879;
+  border-radius: 0.7rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.button:hover {
+  background: #a54f93;
+  color: #fff;
+  border-color: transparent;
+  -webkit-box-shadow: 0 0 0.6rem rgba(165, 79, 147, 0.85);
+          box-shadow: 0 0 0.6rem rgba(165, 79, 147, 0.85);
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.button:active {
+  background: #78306b;
+  color: #fff;
+  border-color: transparent;
+  -webkit-box-shadow: 0 0 0.6rem rgba(120, 48, 107, 0.85);
+          box-shadow: 0 0 0.6rem rgba(120, 48, 107, 0.85);
+}
+
+.button:disabled {
+  background: #eccae5;
+  color: #fff;
+  border-color: transparent;
+}
+
+.button_default {
+  background: #8a3879;
+}
+
+.button_alt {
+  background: #fff;
+  color: #8a3879;
+}
+/*# sourceMappingURL=Button.css.map */

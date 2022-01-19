@@ -1,0 +1,43 @@
+@import "../shared";
+
+.button {
+  width: 100%;
+  padding: 1.2rem;
+  margin: 0.8rem auto 2.4rem auto;
+  border: solid 0.1rem $main-color;
+  border-radius: 0.7rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+  color: $light-color;
+
+  &:hover {
+    background: $main-color-light;
+    color: $light-color;
+    border-color: transparent;
+    box-shadow: 0 0 0.6rem rgba($main-color-light, $alpha: 0.85);
+    transition: all ease-in-out 0.3s;
+  }
+
+  &:active {
+    background: $main-color-dark;
+    color: $light-color;
+    border-color: transparent;
+    box-shadow: 0 0 0.6rem rgba($main-color-dark, $alpha: 0.85);
+  }
+
+  &:disabled {
+    background: $main-color-soft;
+    color: $light-color;
+    border-color: transparent;
+  }
+
+  &_default {
+    background: $main-color;
+  }
+
+  &_alt {
+    background: $light-color;
+    color: $main-color;
+  }
+}

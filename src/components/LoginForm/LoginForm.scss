@@ -1,0 +1,51 @@
+@import "../shared";
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  margin: 12rem 0;
+
+  h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 3.2rem 0;
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 1.6rem;
+    }
+
+    input {
+      border: solid 0.1rem $border-color;
+      border-radius: 0.7rem;
+      padding: 1rem;
+      margin-bottom: 1.6rem;
+      font-size: 1.6rem;
+      color: $input-color;
+
+      &::placeholder {
+        color: $border-color;
+      }
+
+      &:focus {
+        outline-color: $focus-color;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    width: fit-content;
+    align-self: center;
+    border-bottom: solid 0.1rem $main-color;
+    color: $main-color;
+    text-align: center;
+  }
+}

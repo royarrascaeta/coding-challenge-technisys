@@ -1,0 +1,31 @@
+@import "./components/shared";
+
+/*/ //// RESETEO /////*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: $main-font;
+  scroll-behavior: smooth;
+  min-height: -webkit-fill-available;
+  overflow-y: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  overflow-x: hidden;
+  background-color: $light-color;
+  color: $text-color;
+  font-size: 1.6rem;
+}
