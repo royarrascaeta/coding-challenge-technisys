@@ -1,5 +1,4 @@
 import React from 'react';
-import LoginForm from '../LoginForm/LoginForm';
 import Logo from '../Logo/Logo';
 import './GridContainer.scss';
 

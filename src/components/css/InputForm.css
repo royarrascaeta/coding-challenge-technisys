@@ -55,6 +55,11 @@
   outline-color: #649fd6;
 }
 
+.input-form--input option {
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+
 .input-form--pass-ico {
   position: absolute;
   right: 1rem;

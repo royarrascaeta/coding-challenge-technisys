@@ -23,13 +23,24 @@ const LostPasswordForm = () => {
     }, 2000);
 
   }
+  
+  const options = [
+    { value: 'dni', label: 'DNI', selected: true },
+    { value: 'ci', label: 'C.I.' },
+    { value: 'pasaporte', label: 'Pasaporte' }
+  ]
+
+  console.log(options.find( option => option.selected ))
+
 
   return (
+
+
     <div className='lost-password-form'>
       <form onSubmit={handleSubmit}>
         <legend>Olvidé mi contraseña</legend>
         { error && <ErrorMessage />}
-        <InputForm name='dni_type' label='Tipo de documento' type='select' required={true}/>
+        <InputForm name='dni_type' label='Tipo de documento' type='select' required={true} options={ options } />
         <InputForm name='dni_number' label='Número de documento' type='number' placeholder='Ingresá tu número de documento' required={true}/>
         <div className="lost-password-form--buttons">
           <Link to="/">
