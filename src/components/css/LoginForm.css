@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;600&display=swap");
 .login-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,13 +9,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 32rem;
-  margin: 12rem 0;
-}
-
-.login-form h1 {
-  font-size: 2.6rem;
-  font-weight: bold;
+  margin: 9.8rem 0;
 }
 
 .login-form form {
@@ -28,49 +23,20 @@
   margin: 3.2rem 0;
 }
 
-.login-form form label {
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  font-size: 1.6rem;
-}
-
-.login-form form input {
-  border: solid 0.1rem #939393;
-  border-radius: 0.7rem;
-  padding: 1rem;
-  margin-bottom: 1.6rem;
-  font-size: 1.6rem;
-  color: #555555;
-}
-
-.login-form form input::-webkit-input-placeholder {
-  color: #939393;
-}
-
-.login-form form input:-ms-input-placeholder {
-  color: #939393;
-}
-
-.login-form form input::-ms-input-placeholder {
-  color: #939393;
-}
-
-.login-form form input::placeholder {
-  color: #939393;
-}
-
-.login-form form input:focus {
-  outline-color: #649fd6;
+.login-form form legend {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 3.2rem;
 }
 
 .login-form a {
   display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border-bottom: solid 0.1rem #8a3879;
   color: #8a3879;
   text-align: center;

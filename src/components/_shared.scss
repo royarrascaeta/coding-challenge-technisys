@@ -1,6 +1,7 @@
 //Fonts
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;600&display=swap");
 
 //Variables
 $main-color: #8a3879;
@@ -8,13 +9,16 @@ $main-color-light: #a54f93;
 $main-color-dark: #78306b;
 $main-color-soft: #eccae5;
 $warn-color: #d42f1a;
+$warn-bg-color: #fee7e9;
 $text-color: #3b3b3b;
 $input-color: #555555;
 $border-color: #939393;
 $light-color: #fff;
 $focus-color: #649fd6;
+$overlay-color: #ffffff85;
 $main-font: "Lato", sans-serif;
 $logo-font: "Rubik", sans-serif;
+$extra-font: "Encode Sans", sans-serif;
 
 //Mixins
 $breakpoints: (

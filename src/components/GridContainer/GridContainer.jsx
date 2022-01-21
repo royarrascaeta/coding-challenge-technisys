@@ -1,20 +1,20 @@
 import React from 'react';
 import LoginForm from '../LoginForm/LoginForm';
 import Logo from '../Logo/Logo';
-import './ContainerGrid.scss';
+import './GridContainer.scss';
 
-const ContainerGrid = () => {
-  return(
-    <div className='container-grid'>
-      <div className='container-grid-main'>
+const GridContainer = () => {
+  return (
+    <div className='grid-container'>
+      <div className="grid-container--content">
         <Logo />
         <LoginForm />
       </div>
-      <div className="container-grid-secondary">
+      <figure className="grid-container--image">
         <img src='/assets/img/illustration.png' alt='TEKBNK - Ilustración' />
-      </div>
+      </figure>
     </div>
   );
 };
 
-export default ContainerGrid;
+export default GridContainer;

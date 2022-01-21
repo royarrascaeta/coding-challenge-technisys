@@ -1,0 +1,19 @@
+@import "../shared";
+
+.error-message {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1.4rem;
+  width: 100%;
+  max-width: 32rem;
+  margin: -1rem 0 1rem 0;
+  padding: 1.6rem;
+  border: solid 0.05rem $warn-color;
+  border-radius: 0.6rem;
+  background: $warn-bg-color;
+  font-family: $extra-font;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}

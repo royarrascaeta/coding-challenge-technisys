@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;600&display=swap");
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  grid-column: span 2;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh;
+  max-height: 978px;
+  overflow-y: hidden;
+}
+
+.grid-container--content {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  margin: 16.6rem 0 0 1.6rem;
+}
+
+.grid-container--image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: 6/-1;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.grid-container--image img {
+  width: 100%;
+  max-width: 75.8rem;
+  height: auto;
+  margin: 10rem 0 0 -4.5rem;
+}
+/*# sourceMappingURL=GridContainer.css.map */

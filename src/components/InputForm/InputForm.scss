@@ -1,0 +1,45 @@
+@import "../shared";
+
+.input-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &--label {
+    margin-bottom: 0.4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    &[data-required="true"]:after {
+      content: "*";
+      font-family: $extra-font;
+      font-size: 1.6rem;
+      color: $warn-color;
+    }
+  }
+
+  &--input {
+    margin-bottom: 1.6rem;
+    padding: 1rem;
+    padding-top: 1.4rem;
+    border: solid 0.1rem $border-color;
+    border-radius: 0.7rem;
+    font-size: 1.6rem;
+    color: $input-color;
+
+    &::placeholder {
+      color: $border-color;
+    }
+
+    &:focus {
+      outline-color: $focus-color;
+    }
+  }
+
+  &--pass-ico {
+    position: absolute;
+    right: 1rem;
+    bottom: 2.6rem;
+    cursor: pointer;
+  }
+}

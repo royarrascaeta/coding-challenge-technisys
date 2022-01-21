@@ -2,34 +2,35 @@
 
 .button {
   width: 100%;
-  padding: 1.2rem;
+  max-width: 32rem;
   margin: 0.8rem auto 2.4rem auto;
+  padding: 1.2rem;
   border: solid 0.1rem $main-color;
   border-radius: 0.7rem;
   font-size: 1.6rem;
-  cursor: pointer;
-  transition: 0.3s;
   color: $light-color;
+  transition: 0.3s;
+  cursor: pointer;
 
   &:hover {
-    background: $main-color-light;
-    color: $light-color;
     border-color: transparent;
     box-shadow: 0 0 0.6rem rgba($main-color-light, $alpha: 0.85);
+    background: $main-color-light;
+    color: $light-color;
     transition: all ease-in-out 0.3s;
   }
 
   &:active {
-    background: $main-color-dark;
-    color: $light-color;
     border-color: transparent;
     box-shadow: 0 0 0.6rem rgba($main-color-dark, $alpha: 0.85);
+    background: $main-color-dark;
+    color: $light-color;
   }
 
   &:disabled {
+    border-color: transparent;
     background: $main-color-soft;
     color: $light-color;
-    border-color: transparent;
   }
 
   &_default {

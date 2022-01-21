@@ -1,0 +1,32 @@
+@import "../shared";
+
+.grid-container {
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh;
+  max-height: 978px;
+  overflow-y: hidden;
+
+  &--content {
+    grid-column: 2/5;
+    margin: 16.6rem 0 0 1.6rem;
+  }
+
+  &--image {
+    display: flex;
+    grid-column: 6/-1;
+    align-self: center;
+    height: min-content;
+
+    img {
+      width: 100%;
+      max-width: 75.8rem;
+      height: auto;
+      margin: 10rem 0 0 -4.5rem;
+    }
+  }
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from "./App";
 import './index.scss';
-import ContainerGrid from './components/ContainerGrid/ContainerGrid';
 
 ReactDOM.render(
-    <ContainerGrid />,
+    <App />,
   document.getElementById('root')
 );
