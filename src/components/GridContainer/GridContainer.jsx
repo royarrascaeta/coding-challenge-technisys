@@ -3,12 +3,12 @@ import LoginForm from '../LoginForm/LoginForm';
 import Logo from '../Logo/Logo';
 import './GridContainer.scss';
 
-const GridContainer = () => {
+const GridContainer = ( {children} ) => {
   return (
     <div className='grid-container'>
       <div className="grid-container--content">
         <Logo />
-        <LoginForm />
+        { children }
       </div>
       <figure className="grid-container--image">
         <img src='/assets/img/illustration.png' alt='TEKBNK - Ilustración' />

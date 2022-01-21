@@ -3,9 +3,9 @@ import Button from '../Button/Button';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import InputForm from '../InputForm/InputForm';
 import Loader from '../Loader/Loader';
-import './LoginForm.scss';
+import './LostPasswordForm.scss';
 
-const LoginForm = () => {
+const LostPasswordForm = () => {
 
   const [error, setError] = useState(false);
 
@@ -20,21 +20,24 @@ const LoginForm = () => {
       setLoader(false);
       setError(!error);
     }, 2000);
+
   }
 
   return (
-    <div className='login-form'>
+    <div className='lost-password-form'>
       <form onSubmit={handleSubmit}>
-        <legend>Iniciá sesión</legend>
+        <legend>Olvidé mi contraseña</legend>
         { error && <ErrorMessage />}
-        <InputForm name='user' label='Usuario' type='text' placeholder='Ingresá tu usuario' required={true}/>
-        <InputForm name='password' label='Contraseña' type='password' placeholder='Ingresá tu contraseña' required={true}/>
-        <Button value='Ingresar'/>
+        <InputForm name='dni_type' label='Tipo de documento' type='select' required={true}/>
+        <InputForm name='dni_number' label='Número de documento' type='number' placeholder='Ingresá tu número de documento' required={true}/>
+        <div className="lost-password-form--buttons">
+          <Button value='Volver' theme='alt'/>
+          <Button value='Continuar'/>
+        </div>
       </form>
-      <a href="#">Olvidé mi contraseña</a>
       { loader && <Loader /> }
     </div>
   );
 };
 
-export default LoginForm;
+export default LostPasswordForm;
