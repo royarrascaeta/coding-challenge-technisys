@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import InputForm from '../InputForm/InputForm';
@@ -31,7 +32,7 @@ const LoginForm = () => {
         <InputForm name='password' label='Contraseña' type='password' placeholder='Ingresá tu contraseña' required={true}/>
         <Button value='Ingresar'/>
       </form>
-      <a href="#">Olvidé mi contraseña</a>
+      <Link to="/lostpassword">Olvidé mi contraseña</Link>
       { loader && <Loader /> }
     </div>
   );
