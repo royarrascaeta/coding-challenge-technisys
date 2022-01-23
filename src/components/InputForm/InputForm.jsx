@@ -6,6 +6,13 @@ const InputForm = ( { name, label, type, placeholder, required, options } ) => {
 
   const types = ['text','password','number'];
 
+  const customStyles = {
+    menu: () => ({}),
+    option: () => ({}),
+    control: () => ({}),
+    singleValue: () => {}
+  }
+
   return (
     <div className="input-form">
       <label className='input-form--label' htmlFor={ name } data-required={ required } >{ label } </label>
@@ -18,7 +25,13 @@ const InputForm = ( { name, label, type, placeholder, required, options } ) => {
       }
       {
         type === 'select' &&
-          <Select options={ options } defaultValue={ options.find( option => option.selected ) } />
+          <Select 
+            className='input-form--select' 
+            classNamePrefix='input-form--select' 
+            options={ options } 
+            styles={customStyles} 
+            isSearchable={false}
+            defaultValue={ options.find( option => option.selected ) } />
       }
     </div>);
 };

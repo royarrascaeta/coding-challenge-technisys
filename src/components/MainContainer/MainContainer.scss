@@ -14,10 +14,9 @@
     position: absolute;
     z-index: -2;
     top: 0;
-    left: 50%;
-    width: 50%;
+    right: 0;
+    width: calc(50% - 1.2rem);
     height: 100%;
-    margin-left: 1rem;
     border-radius: 10.8rem 0 0 0;
     background: $main-color-soft;
   }

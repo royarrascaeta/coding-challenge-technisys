@@ -20,8 +20,7 @@
 
   &--input {
     margin-bottom: 1.6rem;
-    padding: 1rem;
-    padding-top: 1.4rem;
+    padding: 1.4rem 1rem 1rem 1rem;
     border: solid 0.1rem $border-color;
     border-radius: 0.7rem;
     font-size: 1.6rem;
@@ -33,6 +32,57 @@
 
     &:focus {
       outline-color: $focus-color;
+    }
+  }
+
+  &--select {
+    margin-bottom: 1.4rem;
+    font-size: 1.6rem;
+    color: $input-color;
+
+    &__control {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding: 0.4rem 0.2rem;
+      border: solid 0.1rem $border-color;
+      border-radius: 0.7rem;
+      cursor: default;
+
+      &--is-focused,
+      &:focus {
+        outline: solid 0.2rem $focus-color;
+        outline-offset: -0.1rem;
+      }
+    }
+
+    &__menu {
+      position: absolute;
+      width: 100%;
+      margin-top: 0.6rem;
+      padding: 0.6rem;
+      border-radius: 0.7rem;
+      background: $light-color;
+      box-shadow: 0 0.4rem 0.9rem 0 rgba(0, 0, 0, 0.08);
+      z-index: 2;
+    }
+
+    &__option {
+      border-radius: 0.7rem;
+      color: #555555;
+      background: $light-color;
+      padding: 1rem;
+      cursor: default;
+
+      &--is-selected {
+        background: $main-color-soft;
+      }
+    }
+
+    &__single-value {
+      grid-column: 1/-1;
+      grid-row: 1/3;
     }
   }
 

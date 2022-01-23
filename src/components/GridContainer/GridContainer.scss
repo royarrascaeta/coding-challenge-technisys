@@ -12,6 +12,7 @@
   overflow-y: hidden;
 
   &--content {
+    display: absolute;
     grid-column: 2/5;
     margin: 16.6rem 0 0 1.6rem;
   }
