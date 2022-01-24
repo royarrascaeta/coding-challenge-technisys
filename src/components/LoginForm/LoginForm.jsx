@@ -4,7 +4,7 @@ import { useForm } from '../../hooks/useForm';
 import Button from '../Button/Button';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import InputForm from '../InputForm/InputForm';
-import './LoginForm.scss';
+import './_LoginForm.scss';
 
 const LoginForm = () => {
 

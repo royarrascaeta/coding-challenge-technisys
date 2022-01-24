@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import './InputForm.scss';
+import './_InputForm.scss';
 
 const InputForm = ( { name, label, type, placeholder, options, onchange, value, error, dataRequired } ) => {
 

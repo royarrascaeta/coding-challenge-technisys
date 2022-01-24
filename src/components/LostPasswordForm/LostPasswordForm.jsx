@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 // import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import InputForm from '../InputForm/InputForm';
-import './LostPasswordForm.scss';
+import './_LostPasswordForm.scss';
 
 const LostPasswordForm = () => {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Logo/Logo';
-import './GridContainer.scss';
+import './_GridContainer.scss';
 
 const GridContainer = ( {children, loading} ) => {
   return (

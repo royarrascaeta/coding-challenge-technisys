@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Loader.scss';
+import './_Loader.scss';
 
 
 const Loader = () => {

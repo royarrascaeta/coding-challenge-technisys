@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../../context/appContext';
 import GridContainer from '../GridContainer/GridContainer';
 import Loader from '../Loader/Loader';
-import './MainContainer.scss';
+import './_MainContainer.scss';
 
 const MainContainer = ( {children} ) => {
 

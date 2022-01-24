@@ -1,31 +1,10 @@
 @import "./components/shared";
-
-/*/ //// RESETEO /////*/
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: initial;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: $main-font;
-  scroll-behavior: smooth;
-  min-height: -webkit-fill-available;
-  overflow-y: hidden;
-}
-
-body {
-  min-height: 100vh;
-  display: grid;
-  overflow-x: hidden;
-  background-color: $light-color;
-  color: $text-color;
-  font-size: 1.6rem;
-}
+@import "./components/MainContainer/MainContainer";
+@import "./components/GridContainer/GridContainer";
+@import "./components/Button/Button";
+@import "./components/ErrorMessage/ErrorMessage";
+@import "./components/InputForm/InputForm";
+@import "./components/Loader/Loader";
+@import "./components/LoginForm/LoginForm";
+@import "./components/Logo/Logo";
+@import "./components/LostPasswordForm/LostPasswordForm";
