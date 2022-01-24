@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../Logo/Logo';
 import './GridContainer.scss';
 
-const GridContainer = ( {children} ) => {
+const GridContainer = ( {children, loading} ) => {
   return (
     <div className='grid-container'>
       <div className="grid-container--content">

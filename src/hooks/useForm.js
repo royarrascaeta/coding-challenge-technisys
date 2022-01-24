@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AppContext } from '../context/appContext';
 import { formValidations } from '../helpers/formValidations';
 
 export const useForm = (initialForm) => {
 
+  const [ loader, setLoader ] = useContext(AppContext);
+
   const [form, setForm] = useState( initialForm );
   const [error, setError] = useState( {} );
-  const [loading, setLoading] = useState( false );
   const [response, setResponse] = useState(null);
 
   const handleChange = (e) => {
@@ -35,10 +37,10 @@ export const useForm = (initialForm) => {
     setError(errors);
 
     if(errors.validations){
-      setLoading(true);
+      setLoader(true);
 
       setTimeout(() => {
-        setLoading(false);
+        setLoader(false);
         setResponse({
           error: "El nombre de usuario o la contraseña son incorrectos"
         })
@@ -49,7 +51,7 @@ export const useForm = (initialForm) => {
   return {
     form,
     error,
-    loading,
+    loader,
     response,
     handleChange,
     handleSelectChange,

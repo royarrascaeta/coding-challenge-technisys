@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 // import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import InputForm from '../InputForm/InputForm';
-import Loader from '../Loader/Loader';
 import './LostPasswordForm.scss';
 
 const LostPasswordForm = () => {
@@ -17,7 +16,6 @@ const LostPasswordForm = () => {
   const {
     form,
     error,
-    loading,
     // response,
     handleChange,
     handleSelectChange,
@@ -62,7 +60,6 @@ const LostPasswordForm = () => {
           <Button value='Continuar'/>
         </div>
       </form>
-      { loading && <Loader /> }
     </div>
   );
 };

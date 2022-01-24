@@ -4,7 +4,6 @@ import { useForm } from '../../hooks/useForm';
 import Button from '../Button/Button';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import InputForm from '../InputForm/InputForm';
-import Loader from '../Loader/Loader';
 import './LoginForm.scss';
 
 const LoginForm = () => {
@@ -17,10 +16,10 @@ const LoginForm = () => {
   const {
     form,
     error,
-    loading,
     response,
     handleChange,
-    handleSubmit}
+    handleSubmit
+  }
   = useForm(initialForm);
 
 
@@ -52,7 +51,6 @@ const LoginForm = () => {
         <Button value='Ingresar'/>
       </form>
       <Link to="/lostpassword">Olvidé mi contraseña</Link>
-      { loading && <Loader /> }
     </div>
   );
 };
