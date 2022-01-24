@@ -2,12 +2,11 @@
 
 .grid-container {
   display: grid;
-  grid-template-rows: minmax(29.2rem, 44%) minmax(37.5rem, 56%);
+  grid-template-rows: minmax(3rem, auto);
   grid-column: span 2;
   width: 100%;
-  max-width: 1400px;
   height: 100vh;
-  max-height: 978px;
+  max-height: 100vh;
   // overflow-y: hidden;
 
   @include media-up(md) {
@@ -22,7 +21,7 @@
   }
 
   @include media-up(lg) {
-    overflow-y: hidden;
+    // overflow-y: hidden;
   }
 
   &--content {
@@ -56,23 +55,25 @@
   &--image {
     grid-column: 1/-1;
     display: flex;
-    align-self: center;
     justify-content: center;
-    height: min-content;
     padding: 8.6rem 6.8rem 2.4rem 6.8rem;
 
     @include media-up(md) {
       grid-column: 6/-1;
+      height: min-content;
+      align-self: center;
       justify-content: unset;
       padding: unset;
     }
 
     img {
-      width: 100%;
-      max-width: 32.5rem;
-      height: auto;
+      height: 100%;
+      width: auto;
+      max-width: 100%;
 
       @include media-up(md) {
+        width: 100%;
+        height: auto;
         max-width: 75.8rem;
         margin: 10rem 0 0 -4.5rem;
       }
