@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm } from '../../hooks/useForm';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
@@ -8,21 +9,20 @@ import './LostPasswordForm.scss';
 
 const LostPasswordForm = () => {
 
-  const [error, setError] = useState(false);
+  const initialForm = {
+    dni_type: 'dni',
+    dni_number: ''
+  };
 
-  const [loader, setLoader] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setLoader(!loader);
-    
-    setTimeout(() => {
-      setLoader(false);
-      setError(!error);
-    }, 2000);
-
-  }
+  const {
+    form,
+    error,
+    loading,
+    // response,
+    handleChange,
+    handleSelectChange,
+    handleSubmit}
+  = useForm(initialForm);
   
   const options = [
     { value: 'dni', label: 'DNI', selected: true },
@@ -30,18 +30,29 @@ const LostPasswordForm = () => {
     { value: 'pasaporte', label: 'Pasaporte' }
   ]
 
-  console.log(options.find( option => option.selected ))
-
-
   return (
 
-
     <div className='lost-password-form'>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={ handleSubmit }>
         <legend>Olvidé mi contraseña</legend>
-        { error && <ErrorMessage />}
-        <InputForm name='dni_type' label='Tipo de documento' type='select' required={true} options={ options } />
-        <InputForm name='dni_number' label='Número de documento' type='number' placeholder='Ingresá tu número de documento' required={true}/>
+        {/* { error && <ErrorMessage />} */}
+        <InputForm 
+          name='dni_type' 
+          label='Tipo de documento' 
+          type='select' 
+          options={ options }
+          onchange={ handleSelectChange }
+          value={form.dni_type}
+        />
+        <InputForm 
+          name='dni_number' 
+          label='Número de documento' 
+          type='number' 
+          error={ error.dni_number }
+          placeholder="Ingresá tu número de documento"
+          onchange={ handleChange }
+          value={form.dni_number}
+        />
         <div className="lost-password-form--buttons">
           <Link to="/">
             <Button value='Volver' theme='alt'/>
@@ -49,7 +60,7 @@ const LostPasswordForm = () => {
           <Button value='Continuar'/>
         </div>
       </form>
-      { loader && <Loader /> }
+      { loading && <Loader /> }
     </div>
   );
 };

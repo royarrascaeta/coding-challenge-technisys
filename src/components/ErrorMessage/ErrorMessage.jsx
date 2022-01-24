@@ -1,11 +1,12 @@
 import React from 'react';
 import './ErrorMessage.scss';
 
-const ErrorMessage = () => {
+const ErrorMessage = ({message, type}) => {
+
   return (
-    <div className='error-message'>
+    <div className={`error-message ${type && `error-message--${type}`}`}>
       <img className='error-message--icon' src="/assets/img/warning-icon.png" alt="Error" />
-      <p className='error-message--text'>El nombre de usuario o la contraseña son incorrectos</p>
+      <p className='error-message--text'>{ message.toString() }</p>
     </div>
   );
 };

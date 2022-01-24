@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useForm } from '../../hooks/useForm';
 import Button from '../Button/Button';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import InputForm from '../InputForm/InputForm';
@@ -8,32 +9,48 @@ import './LoginForm.scss';
 
 const LoginForm = () => {
 
-  const [error, setError] = useState(false);
+  const initialForm = {
+    user: '',
+    password: ''
+  };
 
-  const [loader, setLoader] = useState(false);
+  const {
+    form,
+    error,
+    loading,
+    response,
+    handleChange,
+    handleSubmit}
+  = useForm(initialForm);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setLoader(!loader);
-    
-    setTimeout(() => {
-      setLoader(false);
-      setError(!error);
-    }, 2000);
-  }
 
   return (
     <div className='login-form'>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={ handleSubmit }>
         <legend>Iniciá sesión</legend>
-        { error && <ErrorMessage />}
-        <InputForm name='user' label='Usuario' type='text' placeholder='Ingresá tu usuario' required={true}/>
-        <InputForm name='password' label='Contraseña' type='password' placeholder='Ingresá tu contraseña' required={true}/>
+        { response && <ErrorMessage message="El nombre de usuario o la contraseña son incorrectos" type="form" />}
+        <InputForm 
+          name='user' 
+          label='Usuario' 
+          type='text' 
+          placeholder='Ingresá tu usuario'
+          onchange= { handleChange }
+          value= { form.user } 
+          error= { error.user }
+        />
+        <InputForm 
+          name='password' 
+          label='Contraseña' 
+          type='password' 
+          placeholder='Ingresá tu contraseña' 
+          onchange = { handleChange }
+          value= { form.password }
+          error= { error.password }
+        />
         <Button value='Ingresar'/>
       </form>
       <Link to="/lostpassword">Olvidé mi contraseña</Link>
-      { loader && <Loader /> }
+      { loading && <Loader /> }
     </div>
   );
 };
