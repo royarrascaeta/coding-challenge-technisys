@@ -13,11 +13,19 @@
     content: "";
     position: absolute;
     z-index: -2;
-    top: 0;
+    bottom: 0;
     right: 0;
-    width: calc(50% - 1.2rem);
-    height: 100%;
-    border-radius: 10.8rem 0 0 0;
+    width: 100%;
+    height: 78%;
+    border-radius: 4rem 4rem 0 0;
     background: $main-color-soft;
+
+    @include media-up(md) {
+      top: 0;
+      right: 0;
+      width: calc(50% - 1.2rem);
+      height: 100%;
+      border-radius: 10.8rem 0 0 0;
+    }
   }
 }

@@ -37,6 +37,7 @@ const LoginForm = () => {
           onchange= { handleChange }
           value= { form.user } 
           error= { error.user }
+          dataRequired= {true}
         />
         <InputForm 
           name='password' 
@@ -46,6 +47,7 @@ const LoginForm = () => {
           onchange = { handleChange }
           value= { form.password }
           error= { error.password }
+          dataRequired= {true}
         />
         <Button value='Ingresar'/>
       </form>

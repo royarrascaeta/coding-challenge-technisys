@@ -43,6 +43,7 @@ const LostPasswordForm = () => {
           options={ options }
           onchange={ handleSelectChange }
           value={form.dni_type}
+          dataRequired={ true }
         />
         <InputForm 
           name='dni_number' 
@@ -52,6 +53,7 @@ const LostPasswordForm = () => {
           placeholder="Ingresá tu número de documento"
           onchange={ handleChange }
           value={form.dni_number}
+          dataRequired={ true }
         />
         <div className="lost-password-form--buttons">
           <Link to="/">

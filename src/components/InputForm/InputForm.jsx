@@ -3,7 +3,7 @@ import Select from 'react-select';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import './InputForm.scss';
 
-const InputForm = ( { name, label, type, placeholder, options, onchange, value, error } ) => {
+const InputForm = ( { name, label, type, placeholder, options, onchange, value, error, dataRequired } ) => {
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -24,7 +24,7 @@ const InputForm = ( { name, label, type, placeholder, options, onchange, value, 
 
   return (
     <div className="input-form">
-      <label className='input-form--label' htmlFor={ name }>{ label } </label>
+      <label className='input-form--label' htmlFor={ name } data-required={ dataRequired }> { label } </label>
       {
         (types.includes(type)) && 
           <div className="input-form--container">

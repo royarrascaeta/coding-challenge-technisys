@@ -4,6 +4,11 @@
   display: flex;
   gap: 0.4rem;
   align-items: center;
+  justify-content: center;
+
+  @include media-up(md) {
+    justify-content: unset;
+  }
 
   span {
     margin-top: 0.3rem;

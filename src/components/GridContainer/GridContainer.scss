@@ -2,32 +2,80 @@
 
 .grid-container {
   display: grid;
+  grid-template-rows: minmax(29.2rem, 44%) minmax(37.5rem, 56%);
   grid-column: span 2;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1.6rem;
   width: 100%;
   max-width: 1400px;
   height: 100vh;
   max-height: 978px;
-  overflow-y: hidden;
+  // overflow-y: hidden;
+
+  @include media-up(md) {
+    grid-column: span 2;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: unset;
+    gap: 1.6rem;
+    width: 100%;
+    max-width: 1400px;
+    height: 100vh;
+    max-height: 978px;
+  }
+
+  @include media-up(lg) {
+    overflow-y: hidden;
+  }
 
   &--content {
-    display: absolute;
-    grid-column: 2/5;
-    margin: 16.6rem 0 0 1.6rem;
+    grid-column: 1/-1;
+    order: 1;
+    padding: 2.4rem;
+    border-radius: 4rem 4rem 0 0;
+    background: $light-color;
+
+    @include media-up(md) {
+      grid-column: 2/5;
+      order: 0;
+      margin: 16.6rem 0 0 1.6rem;
+      padding: unset;
+    }
+
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 2.4rem auto;
+
+      @include media-up(md) {
+        position: relative;
+        margin: unset;
+      }
+    }
   }
 
   &--image {
+    grid-column: 1/-1;
     display: flex;
-    grid-column: 6/-1;
     align-self: center;
+    justify-content: center;
     height: min-content;
+    padding: 8.6rem 6.8rem 2.4rem 6.8rem;
+
+    @include media-up(md) {
+      grid-column: 6/-1;
+      justify-content: unset;
+      padding: unset;
+    }
 
     img {
       width: 100%;
-      max-width: 75.8rem;
+      max-width: 32.5rem;
       height: auto;
-      margin: 10rem 0 0 -4.5rem;
+
+      @include media-up(md) {
+        max-width: 75.8rem;
+        margin: 10rem 0 0 -4.5rem;
+      }
     }
   }
 }
