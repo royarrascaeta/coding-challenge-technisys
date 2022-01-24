@@ -18,7 +18,7 @@ export const useForm = (initialForm) => {
   };
 
   const handleSelectChange = (val) => {
-    const {label, value} = val;
+    const {value} = val;
 
     setForm({
       ...form,

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import './InputForm.scss';
 
 const InputForm = ( { name, label, type, placeholder, options, onchange, value, error } ) => {
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const types = ['text','password','number'];
 
@@ -14,6 +16,12 @@ const InputForm = ( { name, label, type, placeholder, options, onchange, value, 
     singleValue: () => {}
   }
 
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    setShowPassword(!showPassword);
+  }
+
   return (
     <div className="input-form">
       <label className='input-form--label' htmlFor={ name }>{ label } </label>
@@ -22,7 +30,7 @@ const InputForm = ( { name, label, type, placeholder, options, onchange, value, 
           <div className="input-form--container">
             <input 
               className={`input-form--input ${error && 'input-form--error'}`}
-              type={ type } 
+              type={ (type === 'password' && showPassword) ? 'text' : type } 
               name={ name } 
               id={ name } 
               placeholder={ placeholder } 
@@ -30,7 +38,7 @@ const InputForm = ( { name, label, type, placeholder, options, onchange, value, 
               value={ value }
             />
             {
-              type === 'password' && <span className='input-form--pass-ico'><img src="/assets/img/pass-eye.png" alt="Visualizar Contraseña" /></span>
+              type === 'password' && <button className='input-form--pass-ico' onClick={ handleClick }><img src="/assets/img/pass-eye.png" alt="Visualizar Contraseña" /></button>
             }
           </div>
       }
