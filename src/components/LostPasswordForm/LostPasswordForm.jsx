@@ -32,7 +32,7 @@ const LostPasswordForm = () => {
 
   return (
 
-    <div className='lost-password-form'>
+    <div className='lost-password-form animate__animated animate__fadeInUp animate__faster'>
       <form onSubmit={ handleSubmit }>
         <legend>Olvidé mi contraseña</legend>
         {/* { error && <ErrorMessage />} */}

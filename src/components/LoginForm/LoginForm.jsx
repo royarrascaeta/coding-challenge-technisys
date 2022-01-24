@@ -25,8 +25,8 @@ const LoginForm = () => {
 
 
   return (
-    <div className='login-form'>
-      <form onSubmit={ handleSubmit }>
+    <div className='login-form animate__animated animate__fadeInUp animate__faster'>
+      <form onSubmit={ handleSubmit } >
         <legend>Iniciá sesión</legend>
         { response && <ErrorMessage message="El nombre de usuario o la contraseña son incorrectos" type="form" />}
         <InputForm 
